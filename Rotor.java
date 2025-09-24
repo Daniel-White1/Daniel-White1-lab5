@@ -13,13 +13,20 @@ public class Rotor {
     }
     
     public boolean rotate(){
-        //TODO
+        if (rotorValues.charAt(0) = startChar) {
+            
+        }
                
     }
     
 
     public int indexOf(char c){
-        //TODO
+        for (int i = 0; i < 26; i++){
+            if (rotorValues.charAt(i) == c) {
+                
+            }
+
+        }
     }
 
     public char charAt(int idx){
