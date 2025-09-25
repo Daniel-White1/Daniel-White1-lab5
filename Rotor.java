@@ -11,26 +11,34 @@ public class Rotor {
         while(!this.rotate());
             
     }
-    
-    public boolean rotate(){
-        if (rotorValues.charAt(0) = startChar) {
-            
-        }
-               
+
+    public String getRotorValue() {
+        return rotorValues;
+    }
+
+    public String setRotorValue(String a) {
+        this.rotorValues = a;
+        return rotorValues;
     }
     
+    public boolean rotate(){
+        if (this.rotorValues.charAt(0) == this.startChar) {
+            return true;
+        }
+        return false;
+    }
 
     public int indexOf(char c){
         for (int i = 0; i < 26; i++){
-            if (rotorValues.charAt(i) == c) {
-                
+            if (Rotor.rotorValues.charAt(i) == c) {
+                return i;
             }
 
         }
     }
 
     public char charAt(int idx){
-        //TODO
+        return Rotor.rotorValues.charAt(idx);
     }
 }
     
