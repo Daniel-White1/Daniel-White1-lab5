@@ -30,7 +30,7 @@ public class Rotor {
 
     //search though the array and return the char
     public int indexOf(char c){
-        for (int i = 0; i < 26; i++){
+        for (int i = 0; i < 27; i++){
             if (this.rotorValues.charAt(i) == c) {
                 return i;
             }
