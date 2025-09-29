@@ -21,7 +21,7 @@ public class Rotor {
     public boolean rotate(){
 
         //remembered this is java not c so I dont have to use characters
-        this.rotorValues = this.rotorValues.substring(1) + this.rotorValues.charAt(26);
+        this.rotorValues = this.rotorValues.substring(1) + this.rotorValues.charAt(0);
         if (this.rotorValues.charAt(0) == this.startChar) {
             return true;
         }
