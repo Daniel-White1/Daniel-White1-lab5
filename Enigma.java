@@ -24,12 +24,36 @@ public class Enigma{
     }
 
 
-    
+    //im going to work here first because in my mind its easier to write encryption first
     public String encrypt(String message){
-        //TODO
+        String result = new String();
+        for(int i = 0; i < message.length(); i++){
+            //gets the character we are encypting
+            char e_char = message.charAt(i);
+            
+            //next we have to go though each rotor.
+            //ie: find character on inner -> find its index
+            //find the character in the outer ring in the same index
+            //then find the same character from the outer ring in the middle ring
+            //finally grab that middle index location and find the character that is in the same index in the outer ring
+            int index = rotors[0].indexOf(e_char);
+            e_char = rotors[2].charAt(index);
+            index = rotors[1].indexOf(e_char);
+            e_char = rotors[2].charAt(e_char);
+
+            //next add the new char to result
+            result = result + e_char;
+
+            //then rotate the rotors
+            rotate();
+        }
+        //finally return the resulting string
+        return result;
+        
     }
 
-    
+
+    //This simulates the rotation of the enimga machine rotating each rotor once the lower one is rotated.
     private void rotate(){
         if(rotors[0].rotate()){
             if(rotors[1].rotate()){
