@@ -54,6 +54,8 @@ public class Enigma{
             //gets the character we are encypting
             char startChar = message.charAt(i);
             
+            //The bug has to be here with how we are rotating but as the final result is off but the inital char is correct
+
             //next we have to go though each rotor.
             //ie: find character on inner -> find its index
             //find the character in the outer ring in the same index

@@ -21,11 +21,11 @@ public class Rotor {
     public boolean rotate(){
 
         //remembered this is java not c so I dont have to use characters
-        this.rotorValues = this.rotorValues.substring(1) + this.rotorValues.charAt(0);
-        if (this.rotorValues.charAt(0) == this.startChar) {
-            return true;
-        }
-        return false;
+        char startChar = this.rotorValues.charAt(0);
+        this.rotorValues = this.rotorValues.substring(1) + startChar;
+
+        //I know the problem is the rotors arent rotating properly but im not sure how to fix it as this code should work
+        return this.rotorValues.charAt(0) == this.startChar;
     }
 
     //search though the array and return the char
