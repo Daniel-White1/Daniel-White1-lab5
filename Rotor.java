@@ -19,22 +19,10 @@ public class Rotor {
     }
     
     public boolean rotate(){
-        //create a temprorary array to store the rotated string
-        char[] temp = new char[27];
-        //rotor char is the og rotor string converted into a char array
-        char[] rotor_char = this.rotorValues.toCharArray();
-        //temp copys the values 0~25 into 1~26 spots on its array
-        for(int i = 0; i < 26; ++i){
-            temp[i+1] = rotor_char[i];
-        }
-        //then the temporary value is changed to the last value in the rotor string
-        temp[0] = rotor_char[26];
-        //convert the temp array into a string and place it into the rotor values spot
-        this.rotorValues = temp.toString();
 
-        //check to see if the rotor values at 0 is equal to the starting character
-        //if it is true then return true otherwise return false
-        if (rotorValues.charAt(0) == this.startChar) {
+        //remembered this is java not c so I dont have to use characters
+        this.rotorValues = this.rotorValues.substring(1) + this.rotorValues.charAt(26);
+        if (this.rotorValues.charAt(0) == this.startChar) {
             return true;
         }
         return false;
